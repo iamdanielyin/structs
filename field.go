@@ -139,3 +139,13 @@ func (f *Field) FieldOk(name string) (*Field, bool) {
 		value: v.FieldByName(name),
 	}, true
 }
+
+// ReflectField returns the reflect.StructField.
+func (f *Field) ReflectField() reflect.StructField {
+	return f.field
+}
+
+// ReflectValue returns the reflect.Value.
+func (f *Field) ReflectValue() reflect.Value {
+	return f.value
+}
